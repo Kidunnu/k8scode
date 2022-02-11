@@ -1,0 +1,13 @@
+apiVersion: v1 
+kind: Pod  
+metadata:
+  name: mypod
+  namespace: dev
+  labels:
+    app: mywebapp 
+spec: 
+  containers:
+  - name: mywebapp-c  
+    image: kidunnu/maven-web-app  
+    ports:
+    - containerPort: 8080 
