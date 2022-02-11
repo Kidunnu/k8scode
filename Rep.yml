@@ -1,0 +1,23 @@
+apiVersion: v1 
+kind: ReplicationController
+metadata:
+  name: webapp-rr 
+  namespace: dev
+spec:
+  selector:
+    app: webapp
+  template:
+    metadata:
+      name: webapp-pod 
+      labels:
+        app: webapp 
+    spec: 
+      containers:
+      - name: webapp-c 
+        image: mylandmarktech/java-web-app  
+        ports:
+        - containerPort: 8080 
+
+
+
+
