@@ -1,0 +1,14 @@
+#manifest for creating pod in K8s
+apiVersion: v1 
+kind: Pod  
+metadata:
+  name: webapp-pod
+  namespace: dev
+  labels:
+    app: webapp 
+spec: 
+  containers:
+  - name: webapp-c  
+    image: mylandmarktech/java-web-app  
+    ports:
+    - containerPort: 8080 
